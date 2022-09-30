@@ -1,35 +1,40 @@
-* {
-  margin: 0px;
-}
-
 .container {
-  padding: 50px;
+  width: 70vw;
+  height: 70vh;
+  margin: auto;
+  margin-top: 50px;
+  background-color: orange;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-content: space-between;
+  column-gap: 20px;
+  overflow: auto;
 }
 
-.card {
-  height: 200px;
-  border-bottom: 1px solid gray;
-  margin-top: 20px;
+.footer {
+  display: none;
 }
 
-.left {
-  display: inline-block;
-  height: 100%;
-  width: 25%;
-  vertical-align: top;
+.item {
+  width: 80px;
+  height: 80px;
+  background-color: pink;
+  border: 1px solid black;
+  font-size: 30px;
 }
 
-.right {
-  background-color: #f3f3f3f3;
-  display: inline-block;
-  height: 100%;
-  width: 74%;
+.container div:nth-child(even) {
+  background-color: black;
 }
 
-.right p {
-  line-height: 30px;
-}
-
-.no-border {
-  border: none;
+@media screen and (max-width: 480px) {
+  .container {
+    background-color: red;
+  }
+  .footer {
+    display: block;
+  }
 }
