@@ -138,25 +138,449 @@
 //   console.log("Pogresan unos");
 // }
 
-mesec = 4;
-if (mesec > 0 && mesec < 13) {
-  switch (mesec) {
-    case 1:
-    case 3:
-    case 5:
-    case 7:
-    case 8:
-    case 10:
-    case 12:
-      console.log("Ima 31 dan");
-      break;
-    case 2:
-      console.log("Ima 28/9 dan");
-      break;
-    default:
-      console.log("Ima 30 dan");
-      break;
+// mesec = 4;
+// if (mesec > 0 && mesec < 13) {
+//   switch (mesec) {
+//     case 1:
+//     case 3:
+//     case 5:
+//     case 7:
+//     case 8:
+//     case 10:
+//     case 12:
+//       console.log("Ima 31 dan");
+//       break;
+//     case 2:
+//       console.log("Ima 28/9 dan");
+//       break;
+//     default:
+//       console.log("Ima 30 dan");
+//       break;
+//   }
+// } else {
+//   console.log("pogresan unos");
+// }
+
+// console.log("Hello world");
+// console.log("Hello world");
+// console.log("Hello world");
+// console.log("Hello world");
+// console.log("Hello world");
+// console.log("Hello world");
+// console.log("Hello world");
+// console.log("Hello world");
+// console.log("Hello world");
+// console.log("Hello world");
+// console.log("Hello world");
+
+// for (let mojaVar = 0; mojaVar < 10; mojaVar++) {
+//   console.log("Hello world");
+// }
+
+// for (let mojaVar = 0; mojaVar < 10; mojaVar++) {
+//   console.log("Hello world", mojaVar);
+// }
+// for (i = 6; i > 0; i--) {
+//   console.log(i);
+// }
+
+// for (let i = 0; i < 10; i++) {
+//   // if (i === 7) {
+//   // continue;
+//   // }
+//   // console.log(i);
+
+//   if (i !== 7) {
+//     console.log(i);
+//   }
+// }
+// var numSum = 0;
+
+// for (let i = 0; i < 21; i += 2) {
+//   numSum = Number(numSum) + i;
+//   console.log("Nakon broja", i, "suma je", numSum);
+// }
+
+// for (let i = 0; i < 21; i++) {
+//   if (i % 2 === 0) {
+//     numSum = numSum + i;
+//     console.log("Nakon broja", i, "suma je", numSum);
+//   }
+// }
+
+// console.log(numSum);
+
+// for (let i = 0; i < 6; i++) {
+//   if (i < 3) {
+//     console.log("Pyhton");
+//     continue;
+//   }
+
+//   console.log("Je super");
+// }
+
+// for (i = 0; i < 10; i++) {
+//   console.log("Helo wordl");
+//
+
+// brojUnesenihBrojeva = Number(prompt("Unesite broj brojeva"));
+
+// brParnih = 0;
+// brNeparnih = 0;
+
+// sumParnih = 0;
+// sumNeparnih = 0;
+
+// for (let i = 0; i < brojUnesenihBrojeva; i++) {
+//   broj = Number(prompt("Unesite broj: "));
+//   if (broj % 2 === 0) {
+//     brParnih += 1;
+//     sumParnih += broj;
+//   } else {
+//     brNeparnih += 1;
+//     sumNeparnih += broj;
+//   }
+// }
+
+// console.log("Imamo", brParnih, "parnih brojeva i njihova suma je", sumParnih);
+// console.log(
+//   "Imamo",
+//   brNeparnih,
+//   "neparnih brojeva i njihova suma je",
+//   sumNeparnih
+// );
+
+// brojIteracija = 5;
+
+// while (brojIteracija > 0) {
+//   console.log("PETLJA!!!!!");
+//   brojIteracija--;
+// }
+
+// sifra = "sifra123";
+
+// korSifra = "";
+
+// while (korSifra !== sifra) {
+//   korSifra = prompt("Unesite sifru");
+// }
+
+// console.log("Tacna sifra");
+
+// goalNum = Math.floor(Math.random() * 100);
+// goalNum = 10;
+
+// number = null;
+
+// while (number !== 0) {
+//   number = Number(prompt("Unesite broj:"));
+
+//   if (number === goalNum) {
+//     console.log("Uneli ste tacan broj");
+//     break;
+//   }
+
+//   if (number > goalNum) {
+//     console.log("Prevelik broj");
+//   } else {
+//     console.log("Premali broj");
+//   }
+// }
+
+// mojArr = ["ime1", "ime2", "ime3", "ime4", "ime5", "ime6"];
+
+// console.log(mojArr);
+
+// mojaVAr = mojArr.pop();
+
+// console.log(mojArr);
+
+// console.log(mojaVAr);
+
+// mojarr = [2, 3, 432, 532, 532, 4, 324, 324, 3];
+
+// for (let i = 0; i < 10; i++) {
+//   unos = Number(prompt("Unesite broj:"));
+//   mojarr.push(unos);
+// }
+
+// for (let i = 0; i < mojarr.length; i++) {
+//   if (mojarr[i] % 2 === 0) {
+//     console.log(mojarr[i]);
+//   }
+// }
+
+// mojarr = [2, 3, 432, 532, 532, 4, 324, 324, 3];
+// niz = [];
+// for (i = 0; i < mojarr.length; i++) {
+//   if (mojarr[i] % 2 === 0) niz.push(mojarr[i]);
+// }
+// console.log(niz);
+
+// arr = ["hello", 1, 23, 213, false, [3, 4, 64]];
+
+// mat = [
+//   [34, 45, 67],
+//   [78, 45, 23],
+//   [65, 32, 87],
+// ];
+
+// for (let i = 0; i < mat.length; i++) {
+//   red = "";
+//   for (let j = 0; j < mat[i].length; j++) {
+//     red += mat[i][j] + "[" + i + "]" + "[" + j + "]  ";
+//   }
+//   console.log(red);
+// }
+
+// for (let i = 0; i < mat.length; i++) {
+//   red = "";
+//   for (let j = 0; j < mat[i].length; j++) {
+//     if (i + j === mat[i].length - 1) {
+//       red += mat[i][j] + " ";
+//     } else {
+//       red += "   ";
+//     }
+//   }
+//   console.log(red);
+// }
+
+// 34 56 23
+// 78 45 23
+// 65 32 87
+
+// 34
+//    45
+//       87
+
+//       23
+//    45
+// 65
+
+// arr = [25, 45, 55, 77, 88, 99];
+
+// suma = 0;
+// for (let i = 0; i < arr.length; i++) {
+//   suma += arr[i];
+// }
+
+// averageValue = suma / arr.length;
+
+// console.log(averageValue);
+
+// suma = 0;
+// for (let i = 0; i < niz.length; i++) {
+//   suma += arr[i];
+// }
+
+// function nazivFunckije() {
+//   console.log("funckijaaaa!!!");
+//   console.log("funckijaaaa!!!");
+//   console.log("funckijaaaa!!!");
+//   console.log("funckijaaaa!!!");
+//   console.log("funckijaaaa!!!");
+//   console.log("funckijaaaa!!!");
+//   console.log("funckijaaaa!!!");
+//   console.log("funckijaaaa!!! NOVA PROMENA");
+//   console.log("=================================");
+// }
+
+// nazivFunckije = require("./funcija");
+
+// let br1 = 10;
+// let br2 = 14;
+
+// nazivFunckije(br1, br2);
+// nazivFunckije(999, 12312);
+
+// function evenOdd(myBr) {
+//   if (myBr % 2 === 0) {
+//     console.log("broj je paran");
+//   } else {
+//     console.log("broj je neparan");
+//   }
+// }
+
+// unos = 232;
+
+// evenOdd(unos);
+// evenOdd(23);
+// evenOdd(233);
+
+// 6. Write a function to reverse a number
+//
+// 9. Write a function to check if an input string is a palindrome
+
+// mojarr = [2, 3, 432, 532, 532, 4, false, "hello", 3];
+// //        0  1  2     3    4   5   6         7
+
+// for (let i = 0; i < mojarr.length; i++) {
+//   console.log(mojarr[i]);
+// }
+
+// mat = [
+//   [34, 45],
+//   [78, 45],
+// ];
+
+// for (let i = 0; i < mat.length; i++) {
+//   for (let j = 0; j < mat[i].length; j++) {
+//     console.log(mat[i][j]);
+//   }
+// }
+
+// mojaRec = "anavolimilovana";
+
+// for (let i = 0; i < mojaRec.length / 2; i++) {
+//   console.log(mojaRec[i], mojaRec[mojaRec.length - 1 - i]);
+//   console.log(i, mojaRec.length - 1 - i);
+
+//   if (mojaRec[i] !== mojaRec[mojaRec.length - 1 - i]) {
+//     console.log("NIJE PALINDROM");
+//     break;
+//   }
+// }
+
+// function mojaFunc(arg1) {
+//   console.log("neki posao");
+//   console.log("neki posao");
+//   console.log("neki posao");
+//   console.log("neki posao");
+//   return arg1 * 5;
+// }
+
+// mojaFunc(4);
+
+// function mojaVar(arg1) {
+//   console.log("asdasd");
+//   console.log("asdasd");
+//   console.log("asdasd");
+//   console.log("asdasd");
+//   console.log("asdasd");
+//   arg1();
+// }
+
+// function drugaFunc() {
+//   console.log("druga func");
+// }
+
+// mojaVar(drugaFunc);
+
+// function cunstomSlice(arr, startIndex, endIndex) {
+//   if (!startIndex) {
+//     startIndex = 0;
+//   }
+//   if (!endIndex) {
+//     endIndex = arr.length;
+//   }
+//   myArr = [];
+
+//   for (let i = startIndex; i < endIndex; i++) {
+//     myArr.push(arr[i]);
+//   }
+
+//   return myArr;
+// }
+
+// const animals = ["ant", "bison", "camel", "duck", "elephant"];
+
+// subArr = cunstomSlice(animals);
+
+// console.log(subArr);
+
+// function isPrime(number) {
+//   for (let i = 2; i < number; i++) {
+//     if (number % i === 0) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
+
+// myNumber = 79;
+
+// if (isPrime(myNumber)) {
+//   console.log("broj je prost");
+// } else {
+//   console.log("broj nije prost");
+// }
+
+// function amountTocoins(number) {
+//   appReturn = [];
+
+//   while (number > 0) {
+//     if (number >= 25) {
+//       number = number - 25;
+//       appReturn.push(25);
+//     } else if (number >= 10) {
+//       number = number - 10;
+//       appReturn.push(10);
+//     } else if (number >= 5) {
+//       number = number - 5;
+//       appReturn.push(5);
+//     } else if (number >= 2) {
+//       number = number - 2;
+//       appReturn.push(2);
+//     } else if (number >= 1) {
+//       number = number - 1;
+//       appReturn.push(1);
+//     }
+//   }
+
+//   return appReturn;
+// }
+
+// res = amountTocoins(46);
+// console.log(res);
+
+// let arr = [
+//   1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 29,
+// ];
+
+// function binSearch(arr, target) {
+//   let start = 0;
+//   let end = arr.length - 1;
+
+//   while (start <= end) {
+//     let centar = Math.floor((start + end) / 2);
+
+//     if (target === arr[centar]) {
+//       console.log("centar je target", centar);
+//       return true;
+//     }
+//     if (target < arr[centar]) {
+//       end = centar - 1;
+//     } else {
+//       start = centar + 1;
+//     }
+//   }
+
+//   return false;
+// }
+
+// mojaVar = binSearch(arr, 17);
+
+// console.log(mojaVar);
+
+// ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
+
+// 09283d9q8ud9q80dia9a
+
+function generateWord(wordLen) {
+  const chars =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  const max = chars.length - 1;
+
+  let word = "";
+
+  for (let i = 0; i < wordLen; i++) {
+    radnIndex = Math.floor(Math.random() * max);
+    word += chars[radnIndex];
   }
-} else {
-  console.log("pogresan unos");
+
+  console.log(word);
 }
+
+generateWord(30);
