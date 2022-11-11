@@ -567,20 +567,230 @@
 
 // 09283d9q8ud9q80dia9a
 
-function generateWord(wordLen) {
-  const chars =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+// function generateWord(wordLen) {
+//   const chars =
+//     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-  const max = chars.length - 1;
+//   const max = chars.length - 1;
 
-  let word = "";
+//   let word = "";
 
-  for (let i = 0; i < wordLen; i++) {
-    radnIndex = Math.floor(Math.random() * max);
-    word += chars[radnIndex];
+//   for (let i = 0; i < wordLen; i++) {
+//     radnIndex = Math.floor(Math.random() * max);
+//     word += chars[radnIndex];
+//   }
+
+//   console.log(word);
+// }
+
+// generateWord(30);
+
+// Bubble sort Implementation using Javascript
+// Bubble sort Implementation using Javascript
+// function bblSort(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr.length - 1 - i; j++) {
+//       if (arr[j] > arr[j + 1]) {
+//         let temp = arr[j];
+//         arr[j] = arr[j + 1];
+//         arr[j + 1] = temp;
+//       }
+//     }
+//   }
+
+//   console.log(arr);
+// }
+
+// var arr = [234, 43, 55, 63, 5, 6, 232, 5];
+
+// bblSort(arr);
+
+//ow9j8a09ds
+// user = {
+//   age: 27,
+//   password: "sifra12",
+//   born: true,
+//   location: "SRB",
+//   username: "dzemil123123213",
+// };
+
+// user2 = { ...user };
+
+// user.username = "daris";
+
+// user2.location = "USA";
+
+// console.log(user);
+
+// console.log("=========================");
+
+// console.log(user2);
+
+// library = [
+//   {
+//     author: "Bill Gates",
+//     title: "The Road Ahead",
+//     readingStatus: true,
+//   },
+//   {
+//     author: "Steve Jobs",
+//     title: "Walter Isaacson",
+//     readingStatus: true,
+//   },
+//   {
+//     author: "Suzanne Collins",
+//     title: "Mockingjay: The Final Book of The Hunger Games",
+//     readingStatus: false,
+//   },
+// ];
+
+// for (let i = 0; i < library.length; i++) {
+//   if (library[i].readingStatus) {
+//     console.log("book:", library[i].title);
+//   } else {
+//     console.log("does not read");
+//   }
+// }
+
+// obj1 = {
+//   title: "Walter Isaaasdsadsadasdsadsscson",
+//   readingStatus: true,
+//   nestoNovo: 12312,
+// };
+
+// obj2 = {
+//   author: "Steve Jobs",
+//   title: "Walter Isaacson",
+//   readingStatus: true,
+//   nestoNovo: 0,
+// };
+
+// console.log(obj1 === obj2);
+
+// obj2 = {
+//   author: "NEKI AUTHOR",
+//   title: "Walter Isaaasdsadsadasdsadsscson",
+//   readingStatus: true,
+// };
+
+// const { title, ...rest } = obj2;
+
+// obj2 = { ...rest };
+
+// console.log(obj2);
+
+// class Car {
+//   constructor(name, year) {
+//     this.name = name;
+//     this.year = year;
+//   }
+//   age() {
+//     let date = new Date();
+//     return date.getFullYear() - this.year;
+//   }
+// }
+
+// let myCar = new Car("Ford", 2014);
+
+// class Car {
+//   constructor(n, year) {
+//     console.log("KREIRANJE NOVOG OBJEKTA");
+
+//     this.carName = n;
+//     this.carYear = year;
+//     this.carAge = 2022 - year;
+//   }
+// }
+
+// obj1 = new Car("FORD", 1990);
+
+// console.log(obj1.carName);
+// console.log(obj1.carYear);
+
+// obj1.getYearOfCar(100);
+
+// class Car {
+//   constructor(s, b) {
+//     this.speed = s;
+//     this.brand = b;
+//   }
+
+//   acelerate(value) {
+//     this.speed += value;
+//   }
+
+//   brake(value) {
+//     this.speed -= value;
+//   }
+
+//   describe() {
+//     console.log("This car is going ", this.speed, "km/h");
+//   }
+// }
+
+// c1 = new Car(100, "audi");
+
+// c1.describe();
+// c1.acelerate(24);
+// c1.describe();
+// c1.brake(10);
+// c1.describe();
+
+class Product {
+  constructor(n, p) {
+    this.name = n;
+    this.price = p;
+    this.amount = 0;
   }
-
-  console.log(word);
 }
 
-generateWord(30);
+class ShopingCart {
+  constructor() {
+    this.products = [];
+  }
+
+  addPoductToCart(prod) {
+    const check = { isExist: false, indx: undefined };
+
+    this.products.forEach((p, i) => {
+      if (p.name === prod.name) {
+        check.isExist = true;
+        check.indx = i;
+      }
+    });
+
+    if (check.isExist) {
+      this.products[check.indx].amount += 1;
+    } else {
+      prod.amount = 1;
+      this.products.push(prod);
+    }
+  }
+
+  totalPrice() {
+    let totalPrice = 0;
+
+    this.products.forEach((prod) => {
+      totalPrice += prod.price * prod.amount;
+    });
+
+    if (this.products.length >= 5) {
+      totalPrice -= totalPrice / 10;
+    }
+
+    return totalPrice;
+  }
+}
+
+shopCart = new ShopingCart();
+prod1 = new Product("bananica", 100);
+prod2 = new Product("jaffa", 250);
+prod3 = new Product("coca cola", 120);
+
+shopCart.addPoductToCart(prod1);
+shopCart.addPoductToCart(prod1);
+
+shopCart.addPoductToCart(prod2);
+shopCart.addPoductToCart(prod3);
+console.log(shopCart);
+console.log(shopCart.totalPrice());
