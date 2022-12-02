@@ -736,61 +736,332 @@
 // c1.brake(10);
 // c1.describe();
 
-class Product {
-  constructor(n, p) {
-    this.name = n;
-    this.price = p;
-    this.amount = 0;
-  }
-}
+// class Product {
+//   constructor(n, p) {
+//     this.name = n;
+//     this.price = p;
+//     this.amount = 0;
+//   }
+// }
 
-class ShopingCart {
-  constructor() {
-    this.products = [];
-  }
+// class ShopingCart {
+//   constructor() {
+//     this.products = [];
+//   }
 
-  addPoductToCart(prod) {
-    const check = { isExist: false, indx: undefined };
+//   addPoductToCart(prod) {
+//     const check = { isExist: false, indx: undefined };
 
-    this.products.forEach((p, i) => {
-      if (p.name === prod.name) {
-        check.isExist = true;
-        check.indx = i;
-      }
-    });
+//     this.products.forEach((p, i) => {
+//       if (p.name === prod.name) {
+//         check.isExist = true;
+//         check.indx = i;
+//       }
+//     });
 
-    if (check.isExist) {
-      this.products[check.indx].amount += 1;
-    } else {
-      prod.amount = 1;
-      this.products.push(prod);
-    }
-  }
+//     if (check.isExist) {
+//       this.products[check.indx].amount += 1;
+//     } else {
+//       prod.amount = 1;
+//       this.products.push(prod);
+//     }
+//   }
 
-  totalPrice() {
-    let totalPrice = 0;
+//   totalPrice() {
+//     let totalPrice = 0;
 
-    this.products.forEach((prod) => {
-      totalPrice += prod.price * prod.amount;
-    });
+//     this.products.forEach((prod) => {
+//       totalPrice += prod.price * prod.amount;
+//     });
 
-    if (this.products.length >= 5) {
-      totalPrice -= totalPrice / 10;
-    }
+//     if (this.products.length >= 5) {
+//       totalPrice -= totalPrice / 10;
+//     }
 
-    return totalPrice;
-  }
-}
+//     return totalPrice;
+//   }
+// }
 
-shopCart = new ShopingCart();
-prod1 = new Product("bananica", 100);
-prod2 = new Product("jaffa", 250);
-prod3 = new Product("coca cola", 120);
+// shopCart = new ShopingCart();
+// prod1 = new Product("bananica", 100);
+// prod2 = new Product("jaffa", 250);
+// prod3 = new Product("coca cola", 120);
 
-shopCart.addPoductToCart(prod1);
-shopCart.addPoductToCart(prod1);
+// shopCart.addPoductToCart(prod1);
+// shopCart.addPoductToCart(prod1);
 
-shopCart.addPoductToCart(prod2);
-shopCart.addPoductToCart(prod3);
-console.log(shopCart);
-console.log(shopCart.totalPrice());
+// shopCart.addPoductToCart(prod2);
+// shopCart.addPoductToCart(prod3);
+// console.log(shopCart);
+// console.log(shopCart.totalPrice());
+
+// function func3() {
+//   console.log("3 invoked");
+// }
+
+// function func2() {
+//   console.log("2 invoked");
+//   func3();
+// }
+
+// function func1() {
+//   console.log("1 invoked");
+// }
+
+// func1();
+// func2();
+
+// function func4(arr) {
+//   console.log(4);
+//   arr.forEach((element) => {
+//     console.log(element);
+//   });
+// }
+// function func6() {
+//   console.log(6);
+// }
+
+// console.log(1);
+
+// console.log(2);
+
+// console.log(3);
+
+// setTimeout(func4, 1000);
+
+// console.log(5);
+
+// setTimeout(func6, 900);
+
+// function glavniPosao(clb, timer) {
+//   fetchedArr = [];
+//   console.log("pocetak glavnog posla");
+//   for (let i = 0; i < 900000000; i++) {
+//     if (i % 100000000 === 0) {
+//       fetchedArr.push(i);
+//     }
+//   }
+
+//   console.log("kraj glavnog posla");
+//   clb(fetchedArr);
+// }
+
+// function radSaNizom(arg) {
+//   for (let i = 0; i < arg.length; i++) {
+//     console.log(arg[i] + 10);
+//   }
+// }
+
+// function doubleArrEl(myArr) {
+//   for (let i = 0; i < myArr.length; i++) {
+//     console.log(myArr[i] * 2);
+//   }
+// }
+
+// glavniPosao(radSaNizom, 1000);
+// glavniPosao(doubleArrEl, 1000);
+// arr = [1, 2, 32, 3, 23, 23];
+
+// function myCallback(el) {
+//   console.log("myCallback", el);
+// }
+
+// function customForEach(arr, clb) {
+//   for (let i = 0; i < arr.length; i++) {
+//     clb(arr[i]);
+//   }
+// }
+
+// arr.forEach(myCallback);
+
+// customForEach(arr, myCallback);
+
+// arr = [1, 2, 32, 3, 23, 23];
+
+// arr2 = arr.map((el) => {
+//   if (el < 0) {
+//     return el;
+//   }
+// });
+
+// arr2 = arr.map((el) => el * 3);
+
+// arr.forEach(element => {
+//   arr2.push(element)
+// });
+
+// console.log(arr);
+// console.log(arr2);
+
+// function glavniPosao(clb) {
+//   fetchedArr = [];
+//   console.log("pocetak glavnog posla");
+//   for (let i = 0; i < 900000000; i++) {
+//     if (i % 100000000 === 0) {
+//       fetchedArr.push(i);
+//     }
+//   }
+
+//   console.log("kraj glavnog posla");
+//   clb(fetchedArr);
+// }
+
+// function radSaNizom(arg) {
+//   for (let i = 0; i < arg.length; i++) {
+//     console.log(arg[i] + 10);
+//   }
+// }
+
+// function doubleArrEl(myArr) {
+//   for (let i = 0; i < myArr.length; i++) {
+//     console.log(myArr[i] * 2);
+//   }
+// }
+
+// glavniPosao(radSaNizom);
+// glavniPosao(doubleArrEl);
+
+// myArr = [1, 12, 321, 321];
+
+// myArr.forEach();
+
+// function doWithEl(el) {
+//   console.log("Element nizA:", el);
+// }
+
+// // myArr.forEach(doWithEl);
+
+// function customForEach(arr, clb) {
+//   for (let i = 0; i < arr.length; i++) {
+//     clb(arr[i]);
+//   }
+// }
+
+// customForEach(myArr, doWithEl);
+
+// customForEach(myArr, function (el) {
+//   console.log("nameless array nesto:", el);
+// });
+
+// fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+//   .then(function (res) {
+//     console.log(res);
+//   })
+//   .catch((err) => {
+//     console.log("prikazati error toaster");
+//     console.log(err.message);
+//   });
+
+// myarr = [];
+
+// nekiPosao = new Promise((resolve, reject) => {
+//   const statusCode = 200;
+
+//   if (statusCode === 200) {
+//     resolve({
+//       statusCode,
+//       message: "Uspesno izvrsen posao",
+//       data: [1, 23, 1, 32],
+//     });
+//   }
+//   reject({
+//     statusCode,
+//     message: "greska pri izvrsenju posla",
+//   });
+// });
+
+// function thenFunc()
+// nekiPosao
+//   .then((result) => {
+//     console.log(result);
+//     myarr = result.data;
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+// console.log("hello world");
+// console.log(myarr);
+// console.log("=====================");
+// myarr.forEach((el) => {
+//   console.log(el);
+// });
+
+// nekiPosao = function () {
+//   return new Promise((resolve, reject) => {
+//     const statusCode = 200;
+
+//     if (statusCode === 220) {
+//       resolve({
+//         statusCode,
+//         message: "Uspesno izvrsen posao",
+//         data: [1, 23, 1, 32],
+//       });
+//     }
+//     reject({
+//       statusCode,
+//       message: "greska pri izvrsenju posla",
+//     });
+//   });
+// };
+
+// async function fetchDataFromnowhere() {
+//   myarr = [];
+
+//   try {
+//     const res = await nekiPosao();
+//     myarr = res.data;
+//     return res.data;
+//   } catch (err) {
+//     return err;
+//   }
+// }
+
+// retrunValue = fetchDataFromnowhere()
+//   .then((returnVal) => {
+//     console.log(returnVal);
+//   })
+//   .catch((retrunErr) => {
+//     console.log(retrunErr);
+//   });
+
+// function helloWorld() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve("Hello World!");
+//     }, 2000);
+//   });
+// }
+
+// async function msg() {
+//   const msg = await helloWorld();
+//   console.log("Message:", msg);
+// }
+
+// msg();
+// BASE_URL = "https://restcountries.com/v3.1/name/Aruba";
+// arr = [];
+
+// async function getData() {
+//   const response = await fetch(BASE_URL);
+//   const data = await response.json();
+//   return data;
+// }
+// async function getMoreData() {
+//   const countries = await getData(BASE_URL);
+//   //   const data = await getData("https://api.thecatapi.com/v1/breeds");
+//   return countries;
+// }
+// const variables = arr.map(function (data) {
+//   data.forEach((element) => {
+//     console.log(element);
+//   });
+// });
+
+// getMoreData().then((data) => {
+//   data.forEach((c) => {
+//     console.log(c.name.official);
+//   });
+// });
+
+// https://github.com/Szvejk/Async-Await-Exercises/blob/main/script.js
